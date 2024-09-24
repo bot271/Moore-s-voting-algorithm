@@ -1,0 +1,30 @@
+#include <iostream>
+
+
+int main()
+{
+    using namespace std;
+    int n, count, num;
+    cin >> n;
+    cin >> num;
+    count = 1;
+    
+    for (int i = 1; i < n; ++i)
+    {
+        if (count == 0)
+        {
+            count = 1;
+            cin >> num;
+        }
+        else
+        {
+            int temp;
+            cin >> temp;
+            if (temp == num)
+                ++count;
+            else
+                --count;
+        }
+    }
+    cout << num;
+}
